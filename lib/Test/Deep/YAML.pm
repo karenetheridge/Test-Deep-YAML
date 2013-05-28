@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package Test::Deep::YAML;
-# ABSTRACT: ...
+# ABSTRACT: A Test::Deep plugin for comparing YAML-encoded data
 
 use parent 'Test::Deep::Cmp';
 use Exporter 'import';
@@ -55,20 +55,36 @@ __END__
 
 =head1 SYNOPSIS
 
-...
+    use Test::More;
+    use Test::Deep;
+    use Test::Deep::YAML;
+
+    cmp_deeply(
+        "---\nfoo: bar\n",
+        yaml({ foo => 'bar' }),
+        'YAML-encoded data is correct',
+    );
 
 =head1 DESCRIPTION
 
+=for stopwords yaml
+
+This module provides the C<yaml> function to indicate that the target can be
+parsed as a YAML string, and should be decoded before being compared to the
+indicated expected data.
 
 =head1 FUNCTIONS/METHODS
 
-=begin :list
+=for Pod::Coverage descend diagnostics init
 
-* C<foo>
+=over 4
 
-=end :list
+=item * yaml
 
-...
+Contains the data which should match corresponding data in the "got" structure
+after it has been YAML-decoded.
+
+=back
 
 =head1 SUPPORT
 
@@ -78,12 +94,14 @@ Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Di
 (or L<bug-Test-Deep-YAML@rt.cpan.org|mailto:bug-Test-Deep-YAML@rt.cpan.org>).
 I am also usually active on irc, as 'ether' at C<irc.perl.org>.
 
-=head1 ACKNOWLEDGEMENTS
-
-...
-
 =head1 SEE ALSO
 
-...
+=begin :list
+
+* L<Test::Deep>
+
+* L<Test::Deep::JSON>
+
+=end :list
 
 =cut
