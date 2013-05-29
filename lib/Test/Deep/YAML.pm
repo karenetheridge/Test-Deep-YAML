@@ -73,7 +73,7 @@ This module provides the C<yaml> function to indicate that the target can be
 parsed as a YAML string, and should be decoded before being compared to the
 indicated expected data.
 
-=head1 FUNCTIONS/METHODS
+=head1 FUNCTIONS
 
 =for Pod::Coverage descend diagnostics init
 
