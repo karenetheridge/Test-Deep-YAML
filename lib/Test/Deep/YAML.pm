@@ -99,7 +99,6 @@ I am also usually active on irc, as 'ether' at C<irc.perl.org>.
 =begin :list
 
 * L<Test::Deep>
-
 * L<Test::Deep::JSON>
 
 =end :list
