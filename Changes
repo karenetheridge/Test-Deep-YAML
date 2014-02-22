@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - warnings tests bypassed during installation, to prevent
+            installation issues in the presence of deprecation warnings from
+            upstream dependencies
 
 0.001     2013-05-29 02:28:20Z
           - Initial release.
