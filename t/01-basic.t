@@ -8,7 +8,6 @@ use Test::Deep::YAML;
 use lib 't/lib';
 use Util;
 
-
 my @tests = (
     'invalid YAML' => {
         got => { foo => '---' },
@@ -43,7 +42,8 @@ my @tests = (
         diag => do {
             my ($ok, $diag) = cmp_diag(
                 { foo => { qux => 'baz' } },
-                { foo => { bar => 'baz' } });
+                { foo => { bar => 'baz' } },
+            );
             $diag;
         },
     },
@@ -54,7 +54,8 @@ my @tests = (
         diag => do {
             my ($ok, $diag) = cmp_diag(
                 { foo => { bar => 'qux' } },
-                { foo => { bar => 'baz' } });
+                { foo => { bar => 'baz' } },
+            );
             $diag;
         },
     },
