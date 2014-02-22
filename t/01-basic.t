@@ -59,6 +59,18 @@ my @tests = (
             $diag;
         },
     },
+    'no match (deeper, nested plugin)' => {
+        got => "---\nfoo:\n  bar: qux\n",
+        exp => yaml(Test::Deep::code(sub { (0, 'oh noes') })),
+        ok => 0,
+        diag => do {
+            my ($ok, $diag) = cmp_diag(
+                "---\nfoo:\n  bar: qux\n",
+                Test::Deep::code(sub { (0, 'oh noes') }),
+            );
+            $diag;
+        },
+    },
 
     'match' => {
         got => "---\nfoo: bar\n",

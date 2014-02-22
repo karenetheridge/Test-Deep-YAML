@@ -45,8 +45,9 @@ sub descend
 
 sub diagnostics
 {
-    my $self = shift;
-    return $self->{error_message};
+    my ($self, $where, $last) = @_;
+    return $self->{error_message}
+        || $self->{val}->diagnostics($where, $last);
 }
 
 1;
