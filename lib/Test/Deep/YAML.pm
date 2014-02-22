@@ -78,14 +78,10 @@ indicated expected data.
 
 =for Pod::Coverage descend diagnostics init
 
-=over 4
-
-=item * yaml
+=head2 yaml
 
 Contains the data which should match corresponding data in the "got" structure
 after it has been YAML-decoded.
-
-=back
 
 =head1 SUPPORT
 
