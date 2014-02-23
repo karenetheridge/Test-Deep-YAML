@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.002     2014-02-23 00:05:10Z
           - warnings tests bypassed during installation, to prevent
             installation issues in the presence of deprecation warnings from
             upstream dependencies

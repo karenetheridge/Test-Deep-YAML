@@ -4,7 +4,7 @@ Test::Deep::YAML - A Test::Deep plugin for comparing YAML-encoded data
 
 # VERSION
 
-version 0.001
+version 0.002
 
 # SYNOPSIS
 
@@ -24,12 +24,12 @@ This module provides the `yaml` function to indicate that the target can be
 parsed as a YAML string, and should be decoded before being compared to the
 indicated expected data.
 
-# FUNCTIONS/METHODS
+# FUNCTIONS
 
-- yaml
+## yaml
 
-    Contains the data which should match corresponding data in the "got" structure
-    after it has been YAML-decoded.
+Contains the data which should match corresponding data in the "got" structure
+after it has been YAML-decoded.
 
 # SUPPORT
 
@@ -39,8 +39,8 @@ I am also usually active on irc, as 'ether' at `irc.perl.org`.
 
 # SEE ALSO
 
-- [Test::Deep](http://search.cpan.org/perldoc?Test::Deep)
-- [Test::Deep::JSON](http://search.cpan.org/perldoc?Test::Deep::JSON)
+- [Test::Deep](https://metacpan.org/pod/Test::Deep)
+- [Test::Deep::JSON](https://metacpan.org/pod/Test::Deep::JSON)
 
 # AUTHOR
 
