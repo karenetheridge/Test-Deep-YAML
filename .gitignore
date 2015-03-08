@@ -1,4 +1,6 @@
+/.ackrc
 /.build/
+!/.gitignore
+/.latest
 /Test-Deep-YAML-*/
 /Test-Deep-YAML-*.tar.gz
-/todo.txt
