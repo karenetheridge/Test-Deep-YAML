@@ -1,5 +1,5 @@
 use strict;
-use warnings FATAL => 'all';
+use warnings;
 
 use Test::Deep qw(cmp_details deep_diag);
 
