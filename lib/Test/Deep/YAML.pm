@@ -6,9 +6,9 @@ package Test::Deep::YAML;
 
 use parent 'Test::Deep::Cmp';
 use Exporter 'import';
-use Test::Deep;
-use Try::Tiny;
-use YAML 'Load';
+use Test::Deep ();
+use Try::Tiny ();
+use YAML ();
 
 our @EXPORT = qw(yaml);
 
@@ -28,11 +28,11 @@ sub descend
 {
     my ($self, $got) = @_;
 
-    my $data = try
+    my $data = Try::Tiny::try
     {
-         Load($got);
+        YAML::Load($got);
     }
-    catch
+    Try::Tiny::catch
     {
         chomp($self->{error_message} = $_);
         undef;
