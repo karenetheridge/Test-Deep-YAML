@@ -10,10 +10,10 @@ use Util;
 
 my @tests = (
     'invalid YAML' => {
-        got => { foo => '---' },
+        got => { foo => '--' },
         exp => { foo => yaml('') },
         ok => 0,
-        diag => qr/^YAML Error: Stream does not end with newline character/,
+        diag => qr/^YAML Error: Expected separator '---'/,
     },
 
     'no match (top level, key)' => {
