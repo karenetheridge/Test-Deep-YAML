@@ -5,7 +5,7 @@ package Test::Deep::YAML;
 # KEYWORDS: testing tests plugin YAML data
 # vim: set ts=8 sts=4 sw=4 tw=78 et :
 
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 use Exporter 'import';
 
@@ -20,7 +20,7 @@ sub yaml
 package # hide from PAUSE
     Test::Deep::YAML::Object;
 
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 use parent 'Test::Deep::Cmp';
 use Try::Tiny ();
