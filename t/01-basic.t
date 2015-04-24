@@ -14,7 +14,7 @@ use Util;
 
 my @tests = (
     'invalid YAML' => {
-        got => { foo => '--' },
+        got => { foo => "--\n" },
         exp => { foo => yaml('') },
         ok => 0,
         diag => qr/^YAML Error: Expected separator '---'/,
