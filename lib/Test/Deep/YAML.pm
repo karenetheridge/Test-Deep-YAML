@@ -5,19 +5,22 @@ package Test::Deep::YAML;
 # KEYWORDS: testing tests plugin YAML data
 # vim: set ts=8 sts=4 sw=4 tw=78 et :
 
-use parent 'Test::Deep::Cmp';
 use Exporter 'import';
-use Test::Deep ();
-use Try::Tiny ();
-use YAML ();
 
 our @EXPORT = qw(yaml);
 
 sub yaml
 {
     my ($expected) = @_;
-    return __PACKAGE__->new($expected);
+    return Test::Deep::YAML::Object->new($expected);
 }
+
+package # hide from PAUSE
+    Test::Deep::YAML::Object;
+
+use parent 'Test::Deep::Cmp';
+use Try::Tiny ();
+use YAML ();
 
 sub init
 {
