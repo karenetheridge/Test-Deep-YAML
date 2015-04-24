@@ -1,0 +1,9 @@
+
+see tequila repo (and stash) - trying to figure out if we can use YAML::Tiny
+instead, or what encoding issues there might be.
+It looks like not all backends are consistent -- as we already learned in
+Berlin --
+YAML::Tiny, YAML are correct
+YAML::Syck is brain-dead with utf8
+and YAML::XS expects to be given a byte string (utf8 octets), not character
+string (unicode wide characters)
