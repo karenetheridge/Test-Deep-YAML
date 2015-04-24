@@ -1,12 +1,16 @@
-# NAME
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
 
 Test::Deep::YAML - A Test::Deep plugin for comparing YAML-encoded data
 
-# VERSION
+=head1 VERSION
 
-version 0.002
+version 0.003
 
-# SYNOPSIS
+=head1 SYNOPSIS
 
     use Test::More;
     use Test::Deep;
@@ -18,37 +22,54 @@ version 0.002
         'YAML-encoded data is correct',
     );
 
-# DESCRIPTION
+=head1 DESCRIPTION
 
-This module provides the `yaml` function to indicate that the target can be
+=for stopwords yaml
+
+This module provides the C<yaml> function to indicate that the target can be
 parsed as a YAML string, and should be decoded before being compared to the
 indicated expected data.
 
-# FUNCTIONS
+=head1 FUNCTIONS
 
-## yaml
+=for Pod::Coverage descend diagnostics init
+
+=head2 yaml
 
 Contains the data which should match corresponding data in the "got" structure
 after it has been YAML-decoded.
 
-# SUPPORT
+=head1 SUPPORT
 
-Bugs may be submitted through [the RT bug tracker](https://rt.cpan.org/Public/Dist/Display.html?Name=Test-Deep-YAML)
-(or [bug-Test-Deep-YAML@rt.cpan.org](mailto:bug-Test-Deep-YAML@rt.cpan.org)).
-I am also usually active on irc, as 'ether' at `irc.perl.org`.
+=for stopwords irc
 
-# SEE ALSO
+Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Dist/Display.html?Name=Test-Deep-YAML>
+(or L<bug-Test-Deep-YAML@rt.cpan.org|mailto:bug-Test-Deep-YAML@rt.cpan.org>).
+I am also usually active on irc, as 'ether' at C<irc.perl.org>.
 
-- [Test::Deep](https://metacpan.org/pod/Test::Deep)
-- [Test::Deep::JSON](https://metacpan.org/pod/Test::Deep::JSON)
+=head1 SEE ALSO
 
-# AUTHOR
+=over 4
+
+=item *
+
+L<Test::Deep>
+
+=item *
+
+L<Test::Deep::JSON>
+
+=back
+
+=head1 AUTHOR
 
 Karen Etheridge <ether@cpan.org>
 
-# COPYRIGHT AND LICENSE
+=head1 COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2013 by Karen Etheridge.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
+
+=cut

@@ -1,6 +1,6 @@
 Revision history for Test-Deep-YAML
 
-{{$NEXT}}
+0.003     2015-04-24 03:56:55Z
           - fix tests that no longer behave the same under newer YAML.pm
 
 0.002     2014-02-23 00:05:10Z
