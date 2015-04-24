@@ -3,7 +3,11 @@ use warnings;
 
 use Test::More;
 use if $ENV{AUTHOR_TESTING}, 'Test::Warnings';
+
+binmode $_, ':encoding(UTF-8)' foreach map { Test::Builder->new->$_ } qw(output failure_output);
+
 use Test::Deep::YAML;
+use utf8;
 
 use lib 't/lib';
 use Util;
@@ -80,6 +84,12 @@ my @tests = (
     'deep match' => {
         got => { string => "---\nfoo: bar\n" },
         exp => { string => yaml({ foo => 'bar' }) },
+        ok => 1,
+    },
+
+    'match, UTF-8 encoded' => {
+        got => "--- \nauthor: \"Ævar Arnfjörð Bjarmason <avar\@cpan.org>\"\n",
+        exp => yaml({ author => 'Ævar Arnfjörð Bjarmason <avar@cpan.org>' }),
         ok => 1,
     },
 );
