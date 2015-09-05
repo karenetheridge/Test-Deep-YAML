@@ -91,14 +91,6 @@ indicated expected data.
 Contains the data which should match corresponding data in the "got" structure
 after it has been YAML-decoded.
 
-=head1 SUPPORT
-
-=for stopwords irc
-
-Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Dist/Display.html?Name=Test-Deep-YAML>
-(or L<bug-Test-Deep-YAML@rt.cpan.org|mailto:bug-Test-Deep-YAML@rt.cpan.org>).
-I am also usually active on irc, as 'ether' at C<irc.perl.org>.
-
 =head1 SEE ALSO
 
 =for :list
