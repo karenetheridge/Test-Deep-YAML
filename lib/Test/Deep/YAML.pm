@@ -7,7 +7,7 @@ package Test::Deep::YAML;
 
 our $VERSION = '0.005';
 
-use Exporter 'import';
+use Exporter 5.57 'import';
 our @EXPORT = qw(yaml);
 
 sub yaml
