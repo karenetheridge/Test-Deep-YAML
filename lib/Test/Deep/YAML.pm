@@ -1,9 +1,9 @@
 use strict;
 use warnings;
 package Test::Deep::YAML;
+# vim: set ts=8 sts=4 sw=4 tw=115 et :
 # ABSTRACT: A Test::Deep plugin for comparing YAML-encoded data
 # KEYWORDS: testing tests plugin YAML data
-# vim: set ts=8 sts=4 sw=4 tw=115 et :
 
 our $VERSION = '0.005';
 
