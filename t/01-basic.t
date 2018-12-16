@@ -1,10 +1,9 @@
 use strict;
 use warnings;
+use open ':std', ':encoding(UTF-8)'; # force stdin, stdout, stderr into utf8
 
 use Test::More 0.96;
 use if $ENV{AUTHOR_TESTING}, 'Test::Warnings';
-
-binmode $_, ':encoding(UTF-8)' foreach map { Test::Builder->new->$_ } qw(output failure_output);
 
 use Test::Deep::YAML;
 use utf8;
